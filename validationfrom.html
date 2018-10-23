@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Validation Log in Page</title>
+</head>
+<body>
+    <form>
+            user name<br>
+        <input type="text" name="" id="username">
+             <br>
+             <br>
+             <br>
+        Password<br>
+        <input type="text" name="" id="password"><br>
+        <button type="button" onclick="getInfo()">Click Me</button>
+
+    </form>
+
+    <script>
+    var objPeople = [
+                    {
+
+                        username: "sam",
+                        Password: "codify"
+                    },
+
+                    {
+
+                        username: "matt",
+                        Password: "academy"
+
+                    },
+
+                    {
+                        username: "chris",
+                        Password: "forever"
+                    }
+        
+    ]
+
+    function getInfo() {
+                     var username = document.getElementById("username").value
+                     var Password = document.getElementById("password").value
+                    for(i = 0; i < objPeople.length; i++) {
+                        if(username == objPeople[i].username && Password == objPeople[i].Password) {
+                            alert(username + " is logged in")
+                            return
+                        }
+                    }
+                     alert("incorrect username or password")
+
+    }
+    
+    </script>
+</body>
+</html>
